@@ -22,6 +22,7 @@ n_public = len(public_namelist)
 # Handle data
 data = np.empty((len(hands_namelist),len(public_namelist)))
 for i in range(n_hands):
+    print(f"Hands = {hands_namelist[i]}")
     for j in progressBar(range(n_public)):
         if (hands[i][0] in publics[j]) or (hands[i][1] in publics[j]):
             data[i,j] = np.nan #
